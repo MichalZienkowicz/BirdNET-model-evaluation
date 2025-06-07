@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or BirdNET in your work, please cite the following publication."
+title: "BirdNET: A deep learning solution for avian diversity monitoring"
+authors:
+  - family-names: Kahl
+    given-names: Stefan
+  - family-names: Wood
+    given-names: Connor M.
+  - family-names: Eibl
+    given-names: Maximilian
+  - family-names: Klinck
+    given-names: Holger
+version: "1.0.0"
+date-released: 2021-07-01
+doi: "10.1016/j.ecoinf.2021.101236"
+url: "https://doi.org/10.1016/j.ecoinf.2021.101236"
+type: article
