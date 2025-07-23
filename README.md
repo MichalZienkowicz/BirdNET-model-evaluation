@@ -1,5 +1,5 @@
 # BirdNET-model-evaluation
-Evaluation of BirdNET-Analyzer v2.1.0 model performance on the database of Polish birds audio recordings
+Evaluation of BirdNET-Analyzer v2.1.0 model performance on the dataset of Polish birds audio recordings
 
 
 ## BirdNET 
@@ -12,8 +12,8 @@ You can read more about BirdNET here:
 * BirdNET-Analyzer GitHub repo: https://github.com/birdnet-team/BirdNET-Analyzer
 * BirdNET-Analyzer Documentation: https://birdnet-team.github.io/BirdNET-Analyzer
 
-## Data Base
-Model performance was analyzed on database containing recordings gathered in Puszcza Niepołomnicka (Cracow, Poland) on May of 2024. Descriptions of audio files contained following species:
+## Dataset
+Model performance was analyzed on dataset containing recordings gathered in Puszcza Niepołomnicka (Cracow, Poland) on May of 2024. Descriptions of audio files contained following species:
 * "Sylvia atricapilla"
 * "Erithacus rubecula"
 * "Phylloscopus collybita"
@@ -28,10 +28,10 @@ Model performance was analyzed on database containing recordings gathered in Pus
 * "Emberiza citrinella"
 * "Phylloscopus trochilus"
   
-Database consisted of 768kb/s .wav files, initialy stereo (convertion to mono is included in the code), of length not greater than several minutes. For every file, certain vocalizations were labeled by an ornitologist. It's important to notice, that files consisted of many more vocalizations which were unlabeled.
+Dataset consisted of 768kb/s .wav files, initialy stereo (convertion to mono is included in the code), of length not greater than several minutes. For every file, certain vocalizations were labeled by an ornitologist. It's important to notice, that files consisted of many more vocalizations which were unlabeled.
 Additionally file with specie "Hippolais icterina" was present, but it was not used due to missing information about vocalizations timing.
 
-It has been made sure that the BirdNET species database includes all of the species present in the labels.
+It has been made sure that the BirdNET species dataset includes all of the species present in the labels.
 
 ## Model Evaluation
 BirdNET-Analyzer allows for predicions based on 3 seconds long windows. The evaluation method proposed in this project was to compare true and predicted labels for every seconds of an audio recording. For this reason per-second true and predicted label files were created. For the true labels, even if vocalisation of given specie was present only in fraction of a second, this specie was assigned as a true label for this second, and used for model evaluation. 
